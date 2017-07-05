@@ -12,23 +12,21 @@ import { RoomService } from '../../services/room.service';
 export class AirbnbComponent implements OnInit {
 
   constructor(private roomService: RoomService,
-  private commonService: CommonService) { }
-  public rooms:any;
-  public roomsByNeighborhood:any;
+    private commonService: CommonService) { }
+  public rooms: any;
+  public roomsByNeighborhood: any;
   public totalNumber = 0;
   public city;
   public cities;
   public title = "";
-  
+
   ngOnInit() {
     this.GetCity();
   }
 
-  GetRoomsByNeighborhood(neighborhood)
-  {
-    this.roomService.getFilteredRooms({neighborhood: neighborhood}).subscribe(
-      data=>{
-        debugger
+  GetRoomsByNeighborhood(neighborhood) {
+    this.roomService.getFilteredRooms({ neighborhood: neighborhood }).subscribe(
+      data => {
         this.roomsByNeighborhood = data;
         this.title = this.city + " - " + neighborhood;
         this.totalNumber = data.length;
@@ -36,10 +34,9 @@ export class AirbnbComponent implements OnInit {
     )
   }
 
-  GetRoomsByCity(city)
-  {
-    this.roomService.getFilteredRooms({city: city}).subscribe(
-      data=>{
+  GetRoomsByCity(city) {
+    this.roomService.getFilteredRooms({ city: city }).subscribe(
+      data => {
         this.rooms = data;
         this.roomsByNeighborhood = data;
         this.title = city + " - All neighborhoods";
@@ -53,7 +50,7 @@ export class AirbnbComponent implements OnInit {
       data => {
         this.rooms = data;
       },
-      error =>  console.log(error)
+      error => console.log(error)
     )
   }
 
@@ -63,7 +60,7 @@ export class AirbnbComponent implements OnInit {
         this.cities = data;
         console.log(data);
       },
-      error =>  console.log(error)
+      error => console.log(error)
     )
   }
 
@@ -75,7 +72,7 @@ export class AirbnbComponent implements OnInit {
     this.city = element.currentTarget.value;
     this.GetRoomsByCity(this.city);
   }
-  
+
 
 
 }

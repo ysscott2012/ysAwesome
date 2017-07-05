@@ -19,6 +19,16 @@ import { AveragePriceComponent } from './analytics/airbnb/average-price/average-
 import { HeaderComponent } from './header/header.component';
 import { InfoComponent } from './info/info.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+
+const appRoutes: Routes = [
+  {
+    path: 'analytics',
+    component: AnalyticsComponent
+  }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +46,19 @@ import { InfoComponent } from './info/info.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
+    RouterModule.forChild(appRoutes)
   ],
   providers: [
     RoomService,
     CommonService
+  ],
+  exports: [
+    RouterModule
   ],
   bootstrap: [AppComponent]
 })
