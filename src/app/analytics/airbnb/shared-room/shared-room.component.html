@@ -1,0 +1,25 @@
+<div style="max-width: 250px; padding: 0px 15px">
+    
+    <div style="font-size: 20px; margin-bottom: 20px; font-weight: 600; text-align: center" class="srt-blue">
+        Shared Room
+    </div>  
+
+    <div style="position: relative; ">
+        <div style="position: absolute; top: 79px; width: 100%; text-align: center; font-size: 30px; color: #2C81C0" class="shared-room">
+            {{percentage}}%
+        </div>
+        <div style="display: block; margin: 0px auto; height: 200px">
+            <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [options]="options"
+                    [colors]="colorsOverride"
+                    [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)">
+            </canvas>
+        </div>
+    </div>
+    <div style="text-align: center">{{sharedRoomNumber}}/{{totalRoomNumber}}</div>
+
+</div>

@@ -1,0 +1,49 @@
+
+<!--<div>Simple analytic page, this page is built by using Angular 4 with ng2-charts component. </div>-->
+
+<div>
+    <!--<div>Please select a city that you would like to know.</div>-->
+    <select (change)="changeCity($event)">
+        <option>select city</option>
+        <option *ngFor="let cit of cities" >{{cit.name}}</option>
+    </select>
+</div>
+
+<div style="padding: 0px 40px">
+    <div class="" style="text-align: center; font-size: 60px; color: #2C81C0">
+        {{city}}
+    </div>
+</div>
+
+<div style="padding: 0px 40px" *ngIf="city && rooms">   
+    <div style="text-align: center">Pick any neighborhood by clicking chart</div>
+    <div>
+        <app-bar-chart 
+            [rooms]="rooms" (filteredElement)="GetRoomsByNeighborhood($event)">
+        </app-bar-chart>
+    </div>
+</div>
+
+<div style="background-color: #dadada; height: 1px; width: 100%; margin: 20px 0px;" *ngIf="city && rooms"></div>
+
+<div style="padding: 0px 40px" *ngIf="city && rooms">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center; font-size: 16px; color: #2C81C0; padding: 20px;">{{title}} ({{totalNumber}})</div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <app-entire-house [roomsByNeighborhood]="roomsByNeighborhood">
+            </app-entire-house>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <app-private-room [roomsByNeighborhood]="roomsByNeighborhood">
+            </app-private-room>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <app-shared-room [roomsByNeighborhood]="roomsByNeighborhood">
+            </app-shared-room>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <app-average-price [roomsByNeighborhood]="roomsByNeighborhood">
+            </app-average-price>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.side-menu {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    position: sticky;
+    top: 80px;
+}
+
+.content {
+    width: calc(100% - 210px);
+    display: inline-block;
+    vertical-align: top;
+}
