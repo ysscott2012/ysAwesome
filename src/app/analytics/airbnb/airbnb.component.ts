@@ -20,6 +20,7 @@ export class AirbnbComponent implements OnInit {
   public cities;
   public title = "";
 
+
   ngOnInit() {
     this.GetCity();
   }
@@ -72,7 +73,5 @@ export class AirbnbComponent implements OnInit {
     this.city = element.currentTarget.value;
     this.GetRoomsByCity(this.city);
   }
-
-
 
 }

@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+.side-menu {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 100px);
+    border-right: 1px solid #dadada;
+}
+
+.analytics-content {
+    width: calc(100% - 210px);
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 40px;
+}
+
+.usa-sidenav-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.usa-sidenav-list > li:first-child {
+    border-top: none;
+}
+
+.usa-sidenav-list > li {
+    background-color: transparent;
+    border-top: 1px solid #5b616b;
+    font-size: 18px;
+}
+
+.usa-sidenav-list > li {
+    margin-bottom: 0;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+
+.usa-sidenav-list li.active a {
+    /*border-left: 4px solid #0071bc;*/
+    color: #0071bc;
+    font-weight: 700;
+    padding-left: 1.4rem;
+}
+
+.usa-sidenav-list a {
+    border: none;
+    color: #212121;
+    display: block;
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    line-height: 1.3;
+    padding: 0.85rem 1rem 0.85rem 1.8rem;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4c2c92;
+}

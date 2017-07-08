@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { AnalyticsSideMenuComponent } from './analytics/analytics-side-menu/analytics-side-menu.component';
 import { AirbnbComponent } from './analytics/airbnb/airbnb.component';
 
 import { CommonService } from './services/common.service';
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'analytics',
     component: AnalyticsComponent
+  },
+  {
+    path: 'analytics-airbnb',
+    component: AirbnbComponent
   }
 ];
 
@@ -40,7 +45,8 @@ const appRoutes: Routes = [
     SharedRoomComponent,
     AveragePriceComponent,
     HeaderComponent,
-    InfoComponent
+    InfoComponent,
+    AnalyticsSideMenuComponent
   ],
   imports: [
     BrowserModule,

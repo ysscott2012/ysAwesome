@@ -38,7 +38,8 @@ export class BarChartComponent implements OnInit {
                   fontColor: '#000000',
                   fontFamily: 'Arial, sans-serif',
                   maxRotation: 90,
-                  minRotation:90
+                  minRotation:90,
+                  display: true
                 },
                 barPercentage: 1.0,
                 categoryPercentage: 0.9, 
@@ -65,6 +66,12 @@ export class BarChartComponent implements OnInit {
   ngOnChanges() {
     // Iterate data
     this.Neighborhood = {};
+    this.rooms = this.rooms.sort(function(a,b){
+      if (a.neighborhood > b.neighborhood) return 1;
+      else if(a.neighborhood < b.neighborhood) return -1;
+      else return 0;
+    })
+
     if (this.rooms != null)
     {
       this.rooms.forEach(element => {
@@ -83,6 +90,7 @@ export class BarChartComponent implements OnInit {
           this.Neighborhood[element.neighborhood]['Count']++;
         }
       });
+
 
       // Get data formate
       this.xAxis = [];
@@ -116,6 +124,9 @@ export class BarChartComponent implements OnInit {
   public chartClicked(e:any):void {
     var selectedElement = e.active[0]._model.label;
     this.filteredElement.emit(selectedElement);
+    
   }
 
+
+  
 }
