@@ -1,9 +1,4 @@
-#header {
-   position: sticky;
-   top: 0px;
-   height: 80px;
-   background-color: rgba(255,255,255,1);
-   color: #f7f7f7;
-   z-index: 2000;
-   border-bottom: 1px solid #dadada;
+li {
+    margin: 0px;
+    padding: 0px;
 }

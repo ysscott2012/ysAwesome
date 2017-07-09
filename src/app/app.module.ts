@@ -21,9 +21,14 @@ import { HeaderComponent } from './header/header.component';
 import { InfoComponent } from './info/info.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
 const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
   {
     path: 'analytics',
     component: AnalyticsComponent
@@ -46,7 +51,8 @@ const appRoutes: Routes = [
     AveragePriceComponent,
     HeaderComponent,
     InfoComponent,
-    AnalyticsSideMenuComponent
+    AnalyticsSideMenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
