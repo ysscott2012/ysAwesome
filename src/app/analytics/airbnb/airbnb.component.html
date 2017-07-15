@@ -3,14 +3,14 @@
 <div class="analytics-content" style="overflow: scroll;">
 
     <!--<div>Simple analytic page, this page is built by using Angular 4 with ng2-charts component. </div>-->
-    <div style="padding-left: 40px">Welcome to an Airbnb analytic page, these data is from Airbnb survey. (May. 2017) 
-        <br />data link: <a href="http://tomslee.net/airbnb-data-collection-get-the-data">http://tomslee.net/airbnb-data-collection-get-the-data</a>
+    <div style="padding-left: 40px">Welcome to an Airbnb analytic page, this data set is from Airbnb survey. (May. 2017) 
+        <br />data set link: <a href="http://tomslee.net/airbnb-data-collection-get-the-data">http://tomslee.net/airbnb-data-collection-get-the-data</a>
         <br />1) Step 1: Select a city to start
          <select (change)="changeCity($event)">
             <option>select city</option>
             <option *ngFor="let cit of cities" >{{cit.name}}</option>
         </select>
-        <br />2) Step 2: Hover to individual bar (neighborhoode) and click it to see more detail
+        <br />2) Step 2: Hover to individual bar (neighborhood) and click it to see more detail
     </div>
        
 

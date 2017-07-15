@@ -22,6 +22,8 @@ import { InfoComponent } from './info/info.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ProjectComponent } from './project/project.component';
+import { ResumeComponent } from './resume/resume.component';
 
 
 const appRoutes: Routes = [
@@ -30,12 +32,20 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'resume',
+    component: ResumeComponent
+  },
+  {
     path: 'analytics',
     component: AnalyticsComponent
   },
   {
     path: 'analytics-airbnb',
     component: AirbnbComponent
+  },
+  {
+    path: 'project',
+    component: ProjectComponent
   }
 ];
 
@@ -52,7 +62,9 @@ const appRoutes: Routes = [
     HeaderComponent,
     InfoComponent,
     AnalyticsSideMenuComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

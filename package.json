@@ -26,6 +26,7 @@
     "jquery": "^3.2.1",
     "ng2-charts": "^1.6.0",
     "rxjs": "^5.1.0",
+    "scrollmagic": "^2.0.5",
     "underscore": "^1.8.3",
     "zone.js": "^0.8.4"
   },
