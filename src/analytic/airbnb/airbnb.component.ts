@@ -58,7 +58,6 @@ export class AirbnbComponent implements OnInit {
   GetCity() {
     this.commonService.getCity().subscribe(
       data => {
-        debugger
         this.cities = data;
         console.log(data);
       },

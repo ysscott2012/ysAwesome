@@ -10,10 +10,10 @@ import { InfoComponent } from './info/info.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ProjectComponent } from './project/project.component';
-import { ResumeComponent } from './resume/resume.component';
 
 // Feature Modules
 import { AnalyticModule } from '../analytic/analytic.module';
+import { ResumeModule } from '../resume/resume.module';
 
 // Components
 import { HomeComponent } from './home/home.component';
@@ -31,8 +31,7 @@ import { AppRouting } from './app.route';
     HeaderComponent,
     InfoComponent,
     HomeComponent,
-    ProjectComponent,
-    ResumeComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +42,8 @@ import { AppRouting } from './app.route';
     AppRouting,
 
     // Feature Modules
-    AnalyticModule
+    AnalyticModule,
+    ResumeModule
   ],
   exports: [
     RouterModule
