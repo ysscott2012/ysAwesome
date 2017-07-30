@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { AnalyticsComponent } from './analytics/analytics.component';
 
 import { HeaderComponent } from './header/header.component';
 import { InfoComponent } from './info/info.component';
@@ -29,7 +28,6 @@ import { AppRouting } from './app.route';
 @NgModule({
   declarations: [
     AppComponent,
-    AnalyticsComponent,
     HeaderComponent,
     InfoComponent,
     HomeComponent,
