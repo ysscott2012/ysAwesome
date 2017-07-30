@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import { CommonService } from '../../services/common.service';
-import { RoomService } from '../../services/room.service';
+import { CommonService } from '../services/common.service';
+import { RoomService } from '../services/room.service';
 
 @Component({
   selector: 'app-airbnb',
@@ -58,6 +58,7 @@ export class AirbnbComponent implements OnInit {
   GetCity() {
     this.commonService.getCity().subscribe(
       data => {
+        debugger
         this.cities = data;
         console.log(data);
       },
