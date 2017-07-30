@@ -9,7 +9,7 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'analytic', component: AnalyticComponent},
-  { path: 'resume', component: ResumeComponent}
+  { path: 'resume', component: ResumeComponent},
   //{ path: '**', component: NotFound }, //always last
 ];
 
