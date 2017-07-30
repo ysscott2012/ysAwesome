@@ -9,8 +9,11 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RoomService {
 
-  private roomsURL = 'http://localhost:3000/rooms';  // URL to web API
-  private filteredRoomsURL = 'http://localhost:3000/rooms/filter'
+ //private URL = 'http://localhost';
+  private URL = 'http://ec2-34-225-194-59.compute-1.amazonaws.com';
+
+  private roomsURL = this.URL + ':3000/rooms';  // URL to web API
+  private filteredRoomsURL = this.URL + ':3000/rooms/filter'
   constructor(private http: Http) { }
 
   getRooms(): Observable<any[]> {

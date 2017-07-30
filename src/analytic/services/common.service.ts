@@ -10,8 +10,9 @@ export class CommonService {
 
   constructor(private http:Http) { }
 
-
-  private cityURL = 'http://localhost:3000/city';  // URL to web API
+  //private URL = 'http://localhost';
+  private URL = 'http://ec2-34-225-194-59.compute-1.amazonaws.com';
+  private cityURL = this.URL + ':3000/city'; 
 
 
   getCity(): Observable<any[]> {
