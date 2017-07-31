@@ -219,6 +219,43 @@
             transform: translateY(-15px);
         }
     }
+
+
+    /* Charts */
+    .charts {
+        width: 1280px;
+    }
+
+    @media(max-width: 1279px) {
+        .charts {
+            width: 1080px;
+        }
+    }
+
+    @media(max-width: 1079px) {
+        .charts {
+            width: 880px;
+        }
+    }
+
+    @media(max-width: 879px) {
+        .charts {
+            width: 680px;
+        }
+    }
+
+    @media(max-width: 679px) {
+        .charts {
+            width: 480px;
+        }
+    }
+
+    @media(max-width: 479px) {
+        .charts {
+            width: 280px;
+        }
+    }
+
 </style>
 
 <body>
@@ -339,12 +376,73 @@
 
             </div>
 
-            <div style="position:fixed; height: 500px; width: 100%; left: 0px; background-color: #0071bc; color: white"
+            <div style="position:fixed; height: 500px; width: 100%; left: 0px; background-color:#0071bc; color: white"
                  data-0="top: 1000px; opacity: 0"
                  data-2500="top: 1000px; opacity: 0"
                  data-2600="top: 500px; opacity: 1"
                  data-3000="top: 75px; opacity: 1">
+
+                 <div class="charts" style="padding: 20px 20px; margin: 0px auto;">
+                    <div style="width: 100%; text-align: center; padding: 20px 0px">TECHNICAL SKILLS</div>
+                    <div style="width: 200px; height: 230px; padding: 0px 10px; display: inline-block; position: relative;">
+                        <div style="position: absolute; width: 180px"
+                            data-2500="top: 1000px"
+                            data-2600="top: 500px;"
+                            data-3000="top: 0px;">
+                            <div style="width: 100%; text-align: center">ABC</div>
+                            <canvas id="a"></canvas>
+                        </div>
+                    </div>
+                    <div style="width: 200px; height: 230px; padding: 0px 10px; display: inline-block; position: relative;">
+                        <div style="position: absolute; width: 180px"
+                            data-2500="top: 1100px"
+                            data-2600="top: 600px;"
+                            data-3000="top: 0px;">
+                            <div style="width: 100%; text-align: center">ABC</div>
+                            <canvas id="b"></canvas>
+                        </div>
+                    </div>
+                    <div style="width: 200px; height: 230px; padding: 0px 10px; display: inline-block; position: relative;">
+                        <div style="position: absolute; width: 180px"
+                            data-2500="top: 1200px"
+                            data-2600="top: 700px;"
+                            data-3000="top: 0px;">
+                            <div style="width: 100%; text-align: center">ABC</div>
+                            <canvas id="c"></canvas>
+                        </div>
+                    </div>
+                     <div style="width: 200px; height: 230px; padding: 0px 10px; display: inline-block; position: relative;">
+                        <div style="position: absolute; width: 180px"
+                            data-2500="top: 1300px"
+                            data-2600="top: 800px;"
+                            data-3000="top: 0px;">
+                            <div style="width: 100%; text-align: center">ABC</div>
+                            <canvas id="d"></canvas>
+                        </div>
+                    </div>
+                     <div style="width: 200px; height: 230px; padding: 0px 10px; display: inline-block; position: relative;">
+                        <div style="position: absolute; width: 180px"
+                            data-2500="top: 1500px"
+                            data-2600="top: 900px;"
+                            data-3000="top: 0px;">
+                            <div style="width: 100%; text-align: center">ABC</div>
+                            <canvas id="e"></canvas>
+                        </div>
+                    </div>
+                     <div style="width: 200px; height: 230px; padding: 0px 10px; display: inline-block; position: relative;">
+                        <div style="position: absolute; width: 180px"
+                            data-2500="top: 1600px"
+                            data-2600="top: 1000px;"
+                            data-3000="top: 0px;">
+                            <div style="width: 100%; text-align: center">ABC</div>
+                            <canvas id="f"></canvas>
+                        </div>
+                    </div>
+                    
+                 </div>
+               
                 
+
             </div>
 
         </div>
@@ -362,7 +460,7 @@
         crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="../skrollr-master/skrollr.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="skrollr-master/skrollr.ie.min.js"></script>
 <![endif]-->
@@ -380,18 +478,104 @@
             }
         });
 
-        $(".arrow").on('click', function() {
-            var height = $(window).height(); 
-            debugger
-            $("body").animate({
-                scrollTop: height
-            }, 1000);
-        });
+        // $(".arrow").on('click', function() {
+        //     var height = $(window).height(); 
+        //     debugger
+        //     $("body").animate({
+        //         scrollTop: height
+        //     }, 1000);
+        // });
        
 
         $(window).scroll(function () {
             console.log("data position: " + $(window).scrollTop());
         });
+
+        var ctxa = document.getElementById('a').getContext('2d');
+        var ctxb = document.getElementById('b').getContext('2d');
+        var ctxc = document.getElementById('c').getContext('2d');
+        var ctxd = document.getElementById('d').getContext('2d');
+        var ctxe = document.getElementById('e').getContext('2d');
+        var ctxf = document.getElementById('f').getContext('2d');
+
+        a = {
+            datasets: [{
+                data: [10, 90]
+            }]
+        };
+        b = {
+            datasets: [{
+                data: [20, 80]
+            }]
+        };
+        c = {
+            datasets: [{
+                data: [30, 70]
+            }]
+        };
+        d = {
+            datasets: [{
+                data: [30, 70]
+            }]
+        };
+        e = {
+            datasets: [{
+                data: [30, 70]
+            }]
+        };
+        f = {
+            datasets: [{
+                data: [30, 70]
+            }]
+        };
+
+
+        var options = {
+                cutoutPercentage: 90,
+                legend: {
+                    display: false,
+                    labels: {
+                        fontColor: 'rgb(255, 99, 132)'
+                    }
+                },
+                tooltips: {
+                    enabled: false
+                },
+                
+                
+            }
+
+        var aChart = new Chart(ctxa, {
+            type: 'doughnut',
+            data: a,
+            options: options
+        });
+        var bChart = new Chart(ctxb, {
+            type: 'doughnut',
+            data: b,
+            options: options
+        });
+        var cChart = new Chart(ctxc, {
+            type: 'doughnut',
+            data: c,
+            options: options
+        });
+        var dChart = new Chart(ctxd, {
+            type: 'doughnut',
+            data: d,
+            options: options
+        });
+        var eChart = new Chart(ctxe, {
+            type: 'doughnut',
+            data: e,
+            options: options
+        });
+        var fChart = new Chart(ctxf, {
+            type: 'doughnut',
+            data: f,
+            options: options
+        });
+       
     </script>
 
 
